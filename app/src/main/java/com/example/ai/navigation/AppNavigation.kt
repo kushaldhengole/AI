@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -80,7 +81,7 @@ fun AppNavigation(
         NavHost(
             navController = navController,
             startDestination = Screen.FinanceDashboard.route,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.padding(0.dp)
         ) {
             // Finance Dashboard (Bank Accounts, UPI, Card Debits & Credits)
             composable(Screen.FinanceDashboard.route) {
